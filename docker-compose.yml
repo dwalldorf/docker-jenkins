@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  jenkins:
+    build: .
+    ports:
+      - 9091:9091
+      - 50000:50000
+    volumes:
+      - jenkins-data:/var/jenkins_home
+
+volumes:
+  jenkins-data: {}
